@@ -34,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         queue = Volley.newRequestQueue(this);
 
+        // Llamada a la función que ejecutará nuestra funcion obtenerDatos()
         ejecutar();
-
-
-
     }
 
     private void ejecutar(){
@@ -45,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //metodoEjecutar();//llamamos nuestro metodo
-                obtenerDatos();
+                obtenerDatos(); //llamamos nuestro metodo
                 handler.postDelayed(this,10000);//se ejecutara cada 10 segundos
             }
         },5000);//empezara a ejecutarse después de 5 milisegundos
@@ -68,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                     res.setText("error al decodificar");
                 }
-
-
             }
         }, new Response.ErrorListener() {
             @Override
