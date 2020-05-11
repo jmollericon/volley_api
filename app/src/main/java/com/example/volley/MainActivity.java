@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Llamada a la función que ejecutará nuestra funcion obtenerDatos()
         ejecutar();
+        // cambio en la rama_volley
     }
 
     private void ejecutar(){
@@ -48,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         },5000);//empezara a ejecutarse después de 5 milisegundos
     }
-
-
 
     private void obtenerDatos() {
         //String url = "https://api.androidhive.info/contacts/";
